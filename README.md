@@ -1,5 +1,10 @@
 # Documentations
 ## AutoSSH
+### Server
+```bash
+mkdir -p /home/user/.ssh; useradd user -m -d /home/user -s /bin/true; chown -R user:user /home/user; cd /home/user; echo 'client-key' > /home/user/.ssh/authorized_keys; chown user:user /home/user/.ssh/authorized_keys
+```
+### Client
 Add to `/etc/systemd/system/autossh-tunnel.service`:
 ```bash
 [Unit]
