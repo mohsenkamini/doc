@@ -20,7 +20,7 @@ echo 'client-key' > /home/user/.ssh/authorized_keys
 ```bash
 chown -R user:user /home/user
 ```
-## Client
+## Client (Linux)
 ### Create Systemd service
 Add to `/etc/systemd/system/autossh-tunnel.service`:
 ```bash
@@ -36,4 +36,33 @@ ExecStart=/usr/bin/autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCount
 
 [Install]
 WantedBy=multi-user.target
+```
+## Client (FreeBSD)
+### Create RC Script
+```tcsh
+#!/bin/sh
+#
+# PROVIDE: autossh_tunnel
+# REQUIRE: sshd
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=autossh_tunnel
+desc="AutoSSH tunnel service to server on port 22"
+rcvar=autossh_tunnel_enable
+
+command="/usr/local/bin/sudo"
+command_args='-u user /usr/local/bin/autossh -f -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -NR x:localhost:22 user@spmzt.net -p 22'
+
+load_rc_config $name
+
+#
+# DO NOT CHANGE THESE DEFAULT VALUES HERE
+# SET THEM IN THE /etc/rc.conf FILE
+#
+autossh_tunnel_enable=${autossh_tunnel_enable-"NO"}
+pidfile=${autossh_tunnel_pidfile-"/var/run/autossh_tunnel.pid"}
+
+run_rc_command "$1"
 ```
