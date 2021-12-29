@@ -2,7 +2,7 @@
 ## Private Key
 ### Generate a private ECDSA key
 ```bash
-openssl ecparam -name prime521v1 -genkey -noout -out private.ec.key
+openssl ecparam -name secp521r1 -genkey -noout -out private.ec.key
 ```
 ### Convert and encrypt the private key with a pass phrase:
 ```bash
