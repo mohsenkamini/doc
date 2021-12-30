@@ -14,6 +14,10 @@ pw usermod -G sudo,wheel user
 ## Account Management
 ### login.conf Tuning
 `/etc/login.conf`
+After editing:
+```tcsh
+cap_mkdb /etc/login.conf
+```tcsh
 ### Account Expire Time
 ```tcsh
 pw usermod -p 30-apr-2015 -n trhodes
@@ -60,4 +64,22 @@ echo 'sshd : ALL : allow' >> /etc/hosts.allow
 ```tcsh
 echo 'daily_status_security_pkgaudit_enable="YES"' >> /etc/default/periodic.conf
 pkg audit -F
+```
+## Process Audit
+log files located in `/var/account`
+```tcsh
+sysrc accounting_enable=yes
+service accounting start
+```
+## Sudo Session Log
+Uncomment logging:
+```tcsh
+Defaults log_output
+Defaults!/usr/bin/sudoreplay !log_output
+Defaults!/usr/local/bin/sudoreplay !log_output
+Defaults!REBOOT !log_output
+```
+And
+```tcsh
+echo 'Defaults iolog_dir=/var/log/sudo-io/%{user}' >> /usr/local/etc/sudoers
 ```
