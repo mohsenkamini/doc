@@ -56,3 +56,8 @@ echo 'inetd_enable="YES"
 inetd_flags="-Ww"' >> /etc/rc.conf
 echo 'sshd : ALL : allow' >> /etc/hosts.allow
 ```
+## Security Audit
+```tcsh
+echo 'daily_status_security_pkgaudit_enable="YES"' >> /etc/default/periodic.conf
+pkg audit -F
+```
