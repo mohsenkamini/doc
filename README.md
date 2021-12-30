@@ -7,3 +7,5 @@
 [NFTables Documentation](https://github.com/spmzt/doc/blob/main/nftables.md)
 ## Offensive FreeBSD
 [FreeBSD For Pentesters Documentations](https://github.com/spmzt/doc/blob/main/demon.md)
+## OpenSSL EC Cryptography
+[OpenSSL EC Cryptography](https://github.com/spmzt/doc/blob/main/ec.md)
