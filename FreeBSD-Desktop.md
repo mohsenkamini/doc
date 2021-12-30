@@ -9,3 +9,7 @@ Nord Icon + Orchis Theme Recommended
 ```tcsh
 sudo pkg install -y gtk-xfce-engine 
 ```
+### Slim Theme
+```tcsh
+sudo pkg install -y slim-themes
+```
