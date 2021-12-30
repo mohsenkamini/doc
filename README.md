@@ -1,6 +1,8 @@
 # My Documentations (Cheatsheet)
 ## AutoSSH
 [AutoSSH Documentation](https://github.com/spmzt/doc/blob/main/autossh.md)
+## FreeBSD Hardening
+[FreeBSD Hardening Documentation](https://github.com/spmzt/doc/blob/main/FreeBSD-Hardening.md)
 ## Docker
 [Docker Documentation](https://github.com/spmzt/doc/blob/main/docker.md)
 ## NFTables
