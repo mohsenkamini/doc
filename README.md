@@ -1,4 +1,4 @@
-# My Documentations
+# My Documentations (Cheatsheet)
 ## AutoSSH
 [AutoSSH Documentation](https://github.com/spmzt/doc/blob/main/autossh.md)
 ## Docker
@@ -9,3 +9,5 @@
 [FreeBSD For Pentesters Documentations](https://github.com/spmzt/doc/blob/main/demon.md)
 ## OpenSSL EC Cryptography
 [OpenSSL EC Cryptography](https://github.com/spmzt/doc/blob/main/ec.md)
+## Socat
+[Socat Documentations](https://github.com/spmzt/doc/blob/main/socat.md)
