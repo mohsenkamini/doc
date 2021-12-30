@@ -50,3 +50,9 @@ sysctl net.inet.ip.sourceroute=0
 sysctl net.inet.ip.accept_sourceroute=0
 sysctl net.inet.icmp.bmcastecho=0' >> /etc/sysctl.conf
 ```
+## TCP Wrapper
+```tcsh
+echo 'inetd_enable="YES"
+inetd_flags="-Ww"' >> /etc/rc.conf
+echo 'sshd : ALL : allow' >> /etc/hosts.allow
+```
