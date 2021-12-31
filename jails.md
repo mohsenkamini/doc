@@ -38,6 +38,7 @@ portsnap update
 ```
 ### Setup Jails Directory
 ```tcsh
+pkg install -y cpdup
 cpdup /usr/src /home/jails/mroot/usr/src
 portsnap -p /home/jails/mroot/usr/ports fetch extract
 ```
