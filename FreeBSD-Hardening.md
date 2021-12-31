@@ -83,3 +83,13 @@ And
 ```tcsh
 echo 'Defaults iolog_dir=/var/log/sudo-io/%{user}' >> /usr/local/etc/sudoers
 ```
+## SSHD
+### Remove FreeBSD Banner
+`/etc/ssh/sshd_config`:
+```tcsh
+VersionAddendum ''
+Banner none
+```
+```tcsh
+ service sshd restart
+```
