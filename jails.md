@@ -30,10 +30,13 @@ cd /usr/src
 make -j4 buildworld
 make installworld DESTDIR=/home/jails/mroot
 ```
-### download ports
+### Download Ports
 fetch `/usr/ports`:
 ```tcsh
 portsnap fetch extract
+```
+or update
+```tcsh
 portsnap update
 ```
 ### Setup Jails Directory
