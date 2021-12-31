@@ -13,3 +13,8 @@
 [OpenSSL EC Cryptography](https://github.com/spmzt/doc/blob/main/ec.md)
 ## Socat
 [Socat Documentations](https://github.com/spmzt/doc/blob/main/socat.md)
+### FreeBSD
+you can't remove as root?
+```tcsh
+chflags chflags -R noschg ./
+```
