@@ -9,7 +9,7 @@ sudo sysrc devfs_system_ruleset="localrules"
 Add these content to `/etc/devfs.conf`:
 ```tcsh
 [localrules=5]
-add path 'da*' mode 0660 group operator
+add path 'da[1-3]p*' mode 0660 group operator
 ```
 Done:
 ```tcsh
@@ -20,11 +20,19 @@ USB devices can be automatically mounted by uncommenting this line in `/etc/auto
 ```tcsh
 /media		-media		-nosuid
 ```
+Edit `/etc/devd.conf
+```tcsh
+notify 100 {
+	match "system" "GEOM";
+	match "subsystem" "DEV";
+	action "/usr/sbin/automount -c";
+};
+```
 And:
 ```tcsh
 sudo sysrc autofs_enable="YES"
-service automount start
-service automountd start
-service autounmountd start
-service devd start
+service automount restart
+service automountd restart
+service autounmountd restart
+service devd restart
 ```
