@@ -46,7 +46,6 @@ jailname {
         exec.consolelog = "/var/log/jail-${name}.log";
         persist;
 }
-~  
 ```
 ## Start Service
 ```tcsh
