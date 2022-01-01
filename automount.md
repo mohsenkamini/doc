@@ -36,3 +36,6 @@ service automountd restart
 service autounmountd restart
 service devd restart
 ```
+
+### More to read
+[ntfs](https://kflu.github.io/2018/02/03/2018-02-03-freebsd-ntfs/)
