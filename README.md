@@ -21,4 +21,5 @@ chflags chflags -R noschg ./
 Enable sysvipc?
 ```tcsh
 jail -m jid=1 allow.sysvipc=1
+echo 'sysvshm=new;' >> /etc/jail.conf
 ```
