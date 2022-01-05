@@ -30,13 +30,20 @@ pkg install -y drm-kmod
 For NVIDIA:
 ```tcsh
 pkg install -y nvidia-driver
-echo 'linux_load="YES"' >> /boot/loader.conf
-echo 'nvidia_load="YES"' >> /boot/loader.conf
 echo 'nvidia-modset_load="YES"' >> /boot/loader.conf
 echo 'kld_list="nvidia"' >> /boot/rc.conf
 ```
+Add to `/usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf`:
+```tcsh
+Section "Device"
+        Identifier "NVIDIA Card"
+        VendorName "NVIDIA Corporation"
+        Driver "nvidia"
+EndSection
+```
 ### Install Linux Emulator
 ```tcsh
+kldload linux linux64
 pkg install -y linux_base-c7 linux-c7
 sysrc linux_enable="YES"
 ```
