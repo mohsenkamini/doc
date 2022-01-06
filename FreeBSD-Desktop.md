@@ -47,3 +47,34 @@ kldload linux linux64
 pkg install -y linux_base-c7 linux-c7
 sysrc linux_enable="YES"
 ```
+### Install ZSH
+```tcsh
+sudo pkg install -y zsh
+chsh -s /usr/local/bin/zsh user
+```
+Add to `.zshrc`:
+```tcsh
+# End of lines added by compinstall
+PROMPT='%F{129}[%f%F{7}%n@%m%f%F{129}] [%f%F{7}%~%f%F{129}]%f %% '
+#PROMPT='%F{1}[%f%F{128}%n@%m%f%F{1}]%f%F{7}-%f%F{1}[%f%F{7}%~%f%F{1}]%f %% '
+
+# hide EOL sign ('%')
+PROMPT_EOL_MARK=""
+
+# configure key keybindings
+bindkey -e                                        # emacs key bindings
+bindkey ' ' magic-space                           # do history expansion on space
+bindkey '^U' backward-kill-line                   # ctrl + U
+bindkey '^[[3;5~' kill-word                       # ctrl + Supr
+bindkey '^[[3~' delete-char                       # delete
+bindkey '^[[1;5C' forward-word                    # ctrl + ->
+bindkey '^[[1;5D' backward-word                   # ctrl + <-
+bindkey '^[[5~' beginning-of-buffer-or-history    # page up
+bindkey '^[[6~' end-of-buffer-or-history          # page down
+bindkey '^[[H' beginning-of-line                  # home
+bindkey '^[[F' end-of-line                        # end
+bindkey '^[[Z' undo                               # shift + tab undo last action
+
+# force zsh to show the complete history
+alias history="history 0"
+```
