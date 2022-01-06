@@ -55,8 +55,7 @@ chsh -s /usr/local/bin/zsh user
 Add to `.zshrc`:
 ```tcsh
 # End of lines added by compinstall
-PROMPT='%F{129}[%f%F{7}%n@%m%f%F{129}] [%f%F{7}%~%f%F{129}]%f %% '
-#PROMPT='%F{1}[%f%F{128}%n@%m%f%F{1}]%f%F{7}-%f%F{1}[%f%F{7}%~%f%F{1}]%f %% '
+PROMPT='%F{129}[%f%F{7}%n@%m%f%F{129}] [%f%F{7}%~%f%F{129}] %% '
 
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
