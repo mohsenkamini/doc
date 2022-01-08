@@ -39,3 +39,14 @@ service devd restart
 
 ### More to read
 [ntfs](https://kflu.github.io/2018/02/03/2018-02-03-freebsd-ntfs/)
+
+## Or use DSB
+```tcsh
+sudo pkg install -y dsbmc dsbmc-cli
+sudo sysrc dsbmd_enable=YES
+sudo service dsbmd start
+```
+Mount:
+```tcsh
+dsbmc-cli -m /dev/da0s1
+```
