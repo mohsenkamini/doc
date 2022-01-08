@@ -23,3 +23,7 @@ Enable sysvipc?
 jail -m jid=1 allow.sysvipc=1
 echo 'sysvshm=new;' >> /etc/jail.conf
 ```
+hate config screen?
+```tcsh
+make config-recursive
+```
