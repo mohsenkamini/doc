@@ -16,7 +16,7 @@
 ### FreeBSD
 you can't remove as root?
 ```tcsh
-chflags chflags -R noschg ./
+chflags -R noschg ./
 ```
 Enable sysvipc?
 ```tcsh
