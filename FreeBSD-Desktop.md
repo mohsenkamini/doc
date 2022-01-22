@@ -77,8 +77,8 @@ setopt hist_verify            # show command with history expansion to user befo
 #setopt share_history         # share command history data
 
 # End of lines added by compinstall
-PROMPT='%F{129}[%f%F{7}%n@%m%f%F{129}] [%f%F{7}%~%f%F{129}] %f%F{7}%% '
-
+PROMPT='%F{129}[%f%F{7}%n@%m%f%F{129}] [%f%F{7}%~%f%F{129}] %f%F{7}%% ' # User
+#PROMPT='%F{1}[%f%F{7}%n@%m%f%F{1}] [%f%F{7}%~%f%F{1}] %f%F{7}# ' # Root
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
