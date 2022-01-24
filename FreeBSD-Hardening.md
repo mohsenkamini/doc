@@ -17,7 +17,7 @@ pw usermod -G sudo,wheel user
 After editing:
 ```tcsh
 cap_mkdb /etc/login.conf
-```tcsh
+```
 ### Account Expire Time
 ```tcsh
 pw usermod -p 30-apr-2015 -n trhodes
