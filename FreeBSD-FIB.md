@@ -11,7 +11,7 @@ echo 'net.fibs=2' >> /boot/loader.conf
 ## Jails
 add in `jail.conf`:
 ```tcsh
-        exec.fib=1;
+exec.fib=1;
 ```
 ## interface
 ```tcsh
